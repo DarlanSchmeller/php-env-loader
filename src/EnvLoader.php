@@ -32,6 +32,10 @@ class EnvLoader
         }
     }
 
+    public static function loadFrom(string $path) {
+        return (new self($path))->load();
+    }
+
     protected function parseLine(string $line): void
     {
 

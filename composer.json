@@ -1,0 +1,14 @@
+{
+  "name": "darlanschmeller/php-env-loader",
+  "description": "Lightweight .env file loader for PHP with automatic type casting",
+  "type": "library",
+  "license": "MIT",
+  "autoload": {
+    "psr-4": {
+      "Src\\": "src/"
+    }
+  },
+  "require": {
+    "php": ">=8.0"
+  }
+}

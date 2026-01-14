@@ -12,7 +12,7 @@ class EnvLoader
         $this->path = $path;
     }
 
-    public function load(): void
+    public function load(): array
     {
         // Check if env exists
         if (! file_exists($this->path)) {
@@ -30,9 +30,11 @@ class EnvLoader
         foreach ($this->variables as $key => $value) {
             $_ENV[$key] = $value;
         }
+
+        return $this->variables;
     }
 
-    public static function loadFrom(string $path) {
+    public static function loadFrom(string $path): array {
         return (new self($path))->load();
     }
 

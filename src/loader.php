@@ -26,7 +26,7 @@ foreach ($lines as $line) {
         continue;
     }
 
-    // Check for inline commnets
+    // Check for inline commmets
     if (preg_match('/\s+#/', $line)) {
         // Get key and value before comment
         $line = trim(preg_split('/\s+#/', $line, 2)[0]);
@@ -41,8 +41,18 @@ foreach ($lines as $line) {
         continue;
     }
 
+    // Handle quote strings
+    if (
+        (str_starts_with($value, '"') && str_ends_with($value, '"')) ||
+        (str_starts_with($value, "'") && str_ends_with($value, "'"))
+    ) {
+        $value = substr($value, 1, -1);
+        $_ENV[$key] = $value;
+        continue;
+    }
+
     // Set value to null if empty
-    if ($value === '' || strtolower($value) === 'null' ) {
+    if ($value === '' || strtolower($value) === 'null') {
         $value = null;
         $_ENV[$key] = $value;
         continue;

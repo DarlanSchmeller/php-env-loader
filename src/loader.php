@@ -26,12 +26,6 @@ foreach ($lines as $line) {
         continue;
     }
 
-    // Check for inline commmets
-    if (preg_match('/\s+#/', $line)) {
-        // Get key and value before comment
-        $line = trim(preg_split('/\s+#/', $line, 2)[0]);
-    };
-
     // Parse key and value
     [$key, $value] = explode('=', $line, 2);
     $key = trim($key);
@@ -43,13 +37,19 @@ foreach ($lines as $line) {
 
     // Handle quote strings
     if (
-        (str_starts_with($value, '"') && str_ends_with($value, '"')) ||
-        (str_starts_with($value, "'") && str_ends_with($value, "'"))
+        (str_starts_with($value, '"') && str_ends_with($value, '"') && strlen($value) >= 2) ||
+        (str_starts_with($value, "'") && str_ends_with($value, "'") && strlen($value) >= 2)
     ) {
         $value = substr($value, 1, -1);
         $_ENV[$key] = $value;
         continue;
     }
+
+    // Check for inline comments
+    if (preg_match('/\s+#/', $value)) {
+        // Get key and value before comment
+        $value = trim(preg_split('/\s+#/', $value, 2)[0]);
+    };
 
     // Set value to null if empty
     if ($value === '' || strtolower($value) === 'null') {

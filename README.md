@@ -4,7 +4,6 @@
 
 A lightweight, object-oriented PHP library to load `.env` files into `$_ENV` with **automatic type casting** and **quote handling**. Perfect for small projects, scripts, or when you want a simple alternative to `vlucas/phpdotenv`.
 
----
 
 ## Features
 
@@ -18,12 +17,23 @@ A lightweight, object-oriented PHP library to load `.env` files into `$_ENV` wit
   - `"null"` → `null`  
 - Static helper method for convenience  
 
----
 
 ## Installation
 
-Clone the repository:
+### Via Composer (recommended)
 
+```bash
+composer require darlanschmeller/php-env-loader
+```
+
+Include in your project:
+```php
+require __DIR__ . '/vendor/autoload.php';
+
+use DarlanSchmeller\EnvLoader\EnvLoader;
+```
+
+### From source (for development only)
 ```bash
 git clone https://github.com/DarlanSchmeller/php-env-loader.git
 ```
@@ -31,10 +41,10 @@ git clone https://github.com/DarlanSchmeller/php-env-loader.git
 Include in your project:
 ```php
 require __DIR__ . '/src/EnvLoader.php';
-use Src\EnvLoader;
+
+use DarlanSchmeller\EnvLoader\EnvLoader;
 ```
 
----
 
 ## Usage
 
@@ -75,7 +85,6 @@ $_ENV['APP_DEBUG'];    // bool(true)
 $_ENV['TIMEOUT'];      // float(5.5)
 ```
 
----
 
 > [!NOTE]
 > - Inline comments are supported outside quotes, e.g., `DB_HOST=127.0.0.1 # main database host`

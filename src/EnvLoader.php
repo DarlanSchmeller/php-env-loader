@@ -1,6 +1,6 @@
 <?php
 
-namespace Src;
+namespace DarlanSchmeller\EnvLoader;
 
 class EnvLoader
 {
@@ -34,7 +34,8 @@ class EnvLoader
         return $this->variables;
     }
 
-    public static function loadFrom(string $path): array {
+    public static function loadFrom(string $path): array
+    {
         return (new self($path))->load();
     }
 

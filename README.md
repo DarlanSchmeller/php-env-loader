@@ -1,6 +1,6 @@
 # 🪴 PHP Env Loader [![.env](https://img.shields.io/badge/.env-Loader-%2300C853?logo=environment&logoColor=white&style=for-the-badge)]()
 
-[![PHP](https://img.shields.io/badge/PHP-%3E%3D8.0-blue?logo=php&logoColor=white)](https://www.php.net/)
+[![PHP](https://img.shields.io/badge/PHP-%3E%3D8.0-blue?logo=php&logoColor=white)](https://www.php.net/) [![Packagist](https://img.shields.io/packagist/v/darlanschmeller/php-env-loader)](https://packagist.org/packages/darlanschmeller/doc-ocr-php) [![License](https://img.shields.io/badge/license-MIT-green)](LICENSE) ![PHP Composer CI](https://github.com/DarlanSchmeller/php-env-loader/actions/workflows/php.yml/badge.svg)
 
 A lightweight, object-oriented PHP library to load `.env` files into `$_ENV` with **automatic type casting** and **quote handling**. Perfect for small projects, scripts, or when you want a simple alternative to `vlucas/phpdotenv`.
 
@@ -83,6 +83,13 @@ $_ENV['DB_PORT'];      // int(3306)
 $_ENV['DB_PASSWORD'];  // string("supersecret")
 $_ENV['APP_DEBUG'];    // bool(true)
 $_ENV['TIMEOUT'];      // float(5.5)
+```
+
+## Running Automated Tests
+
+Run all PHPUnit tests for this library:
+```bash
+./vendor/bin/phpunit tests
 ```
 
 

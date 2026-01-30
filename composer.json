@@ -5,10 +5,14 @@
   "license": "MIT",
   "autoload": {
     "psr-4": {
-      "DarlanSchmeller\\EnvLoader\\": "src/"
+      "DarlanSchmeller\\EnvLoader\\": "src/",
+      "Tests": "tests/"
     }
   },
   "require": {
     "php": ">=8.0"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "^11"
   }
 }

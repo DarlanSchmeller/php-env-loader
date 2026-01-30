@@ -1,6 +1,6 @@
 # 🪴 PHP Env Loader [![.env](https://img.shields.io/badge/.env-Loader-%2300C853?logo=environment&logoColor=white&style=for-the-badge)]()
 
-[![PHP](https://img.shields.io/badge/PHP-%3E%3D8.0-blue?logo=php&logoColor=white)](https://www.php.net/) [![Packagist](https://img.shields.io/packagist/v/darlanschmeller/php-env-loader)](https://packagist.org/packages/darlanschmeller/doc-ocr-php) [![License](https://img.shields.io/badge/license-MIT-green)](LICENSE) ![PHP Composer CI](https://github.com/DarlanSchmeller/php-env-loader/actions/workflows/php.yml/badge.svg)
+[![PHP](https://img.shields.io/badge/PHP-%3E%3D8.0-blue?logo=php&logoColor=white)](https://www.php.net/) [![Packagist](https://img.shields.io/packagist/v/darlanschmeller/php-env-loader)](https://packagist.org/packages/darlanschmeller/php-env-loader) [![License](https://img.shields.io/badge/license-MIT-green)](LICENSE) ![PHP Composer CI](https://github.com/DarlanSchmeller/php-env-loader/actions/workflows/php.yml/badge.svg)
 
 A lightweight, object-oriented PHP library to load `.env` files into `$_ENV` with **automatic type casting** and **quote handling**. Perfect for small projects, scripts, or when you want a simple alternative to `vlucas/phpdotenv`.
 

@@ -15,7 +15,8 @@ A lightweight, object-oriented PHP library to load `.env` files into `$_ENV` wit
   - `"true"` / `"false"` → `bool`  
   - Numeric strings → `int` or `float`  
   - `"null"` → `null`  
-- Static helper method for convenience  
+- Static helper method for convenience 
+- Comprehensive PHPUnit test coverage
 
 
 ## Installation
@@ -85,16 +86,15 @@ $_ENV['APP_DEBUG'];    // bool(true)
 $_ENV['TIMEOUT'];      // float(5.5)
 ```
 
+> [!NOTE]
+> - Inline comments are supported outside quotes, e.g., `DB_HOST=127.0.0.1 # main database host`
+> - Quotes around values are stripped automatically
+> - Empty strings and "null" values are converted to null 
+ 
+
 ## Running Automated Tests
 
 Run all PHPUnit tests for this library:
 ```bash
 ./vendor/bin/phpunit tests
 ```
-
-
-> [!NOTE]
-> - Inline comments are supported outside quotes, e.g., `DB_HOST=127.0.0.1 # main database host`
-> - Quotes around values are stripped automatically
-> - Empty strings and "null" values are converted to null 
- 

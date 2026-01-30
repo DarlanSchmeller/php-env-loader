@@ -6,7 +6,7 @@
   "autoload": {
     "psr-4": {
       "DarlanSchmeller\\EnvLoader\\": "src/",
-      "Tests": "tests/"
+      "Tests\\": "tests/"
     }
   },
   "require": {
